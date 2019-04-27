@@ -1,0 +1,145 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing   : border-box;
+  box-sizing        : border-box;
+}
+body,
+html {
+  height : 100%;
+  margin : 0;
+  padding: 0;
+}
+hr {
+  border          : none;
+  height          : 1px;
+  background-image: -webkit-linear-gradient(to right, transparent, rgba(0, 0, 0, .5) 50%, transparent);
+  background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, .5) 50%, transparent);
+}
+button {
+  font-size  : inherit;
+  font-family: inherit;
+}
+/*********************/
+/* Responsive Design */
+@media (max-width: 319px) {
+  .hide-if-lt-320 {
+    display: none;
+  }
+}
+@media (min-width: 320px) {
+  .hide-if-gt-320 {
+    display: none;
+  }
+}
+@media (max-width: 479px) {
+  .hide-if-lt-480 {
+    display: none;
+  }
+}
+@media (min-width: 480px) {
+  .hide-if-gt-480 {
+    display: none;
+  }
+}
+@media (max-width: 639px) {
+  .hide-if-lt-640 {
+    display: none;
+  }
+}
+@media (min-width: 640px) {
+  .hide-if-gt-640 {
+    display: none;
+  }
+}
+@media (max-width: 799px) {
+  .hide-if-lt-800 {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  .hide-if-gt-800 {
+    display: none;
+  }
+}
+/****************************/
+/** Material Design Themes **/
+/****************************/
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 120%;
+}
+h2 {
+  font-size: 110%;
+}
+h3 {
+  font-size: 100%;
+}
+/************************/
+/* Flex grow and shrink */
+/************************/
+.thm-flex-grow-0 {
+  flex-grow: 0;
+}
+.thm-flex-shrink-0 {
+  flex-shrink: 0;
+}
+.thm-flex-grow-1 {
+  flex-grow: 1;
+}
+.thm-flex-shrink-1 {
+  flex-shrink: 1;
+}
+.thm-flex-grow-2 {
+  flex-grow: 2;
+}
+.thm-flex-shrink-2 {
+  flex-shrink: 2;
+}
+.thm-flex-grow-3 {
+  flex-grow: 3;
+}
+.thm-flex-shrink-3 {
+  flex-shrink: 3;
+}
+.thm-flex-grow-4 {
+  flex-grow: 4;
+}
+.thm-flex-shrink-4 {
+  flex-shrink: 4;
+}
+.thm-flex-grow-5 {
+  flex-grow: 5;
+}
+.thm-flex-shrink-5 {
+  flex-shrink: 5;
+}
+.thm-flex-grow-6 {
+  flex-grow: 6;
+}
+.thm-flex-shrink-6 {
+  flex-shrink: 6;
+}
+.thm-flex-grow-7 {
+  flex-grow: 7;
+}
+.thm-flex-shrink-7 {
+  flex-shrink: 7;
+}
+.thm-flex-grow-8 {
+  flex-grow: 8;
+}
+.thm-flex-shrink-8 {
+  flex-shrink: 8;
+}
+.thm-flex-grow-9 {
+  flex-grow: 9;
+}
+.thm-flex-shrink-9 {
+  flex-shrink: 9;
+}

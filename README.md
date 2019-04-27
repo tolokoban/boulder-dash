@@ -1,2 +1,5 @@
-# boulder-dash
-A Boulder-Dash clone written in WebGL
+# Trail-Passion Guide
+## TrailPassionCore
+### getPackImage( msgId, packId)
+
+### getPacks( msgId )
