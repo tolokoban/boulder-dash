@@ -83,7 +83,7 @@ div.tbl > div > div:last-child {
   margin: -90px -120px;
   border-radius: 8px;
   padding: 8px;
-  background: rgba(0,0,0,.8);
+  background: rgba(32,16,0,.8);
   z-index: 9;
   text-align: center;
   font: 70%;
@@ -117,7 +117,7 @@ div.tbl > div > div:last-child {
   margin: -160px -120px;
   border-radius: 8px;
   padding: 8px;
-  background: rgba(0,0,0,.8);
+  background: rgba(32,16,0,.8);
   z-index: 9;
   font: 70%;
   opacity: 1;

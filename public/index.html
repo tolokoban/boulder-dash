@@ -21,27 +21,22 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Boulder Dash (WebGL)</title>
+    <style>#root,#splash{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        background: #000;
+        }</style>
 </head>
 
 <body class="thm-bg0">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <canvas id="canvas"></canvas>
-    <header>
-        <div>Life x <b id='life'>3</b></div>
-        <div><b id='score'>0</b></div>
-        <div id='bonus'>0</div>
-        <div><b id='diam'>12</b> x <img src="diam.gif"/></div>
-    </header>
-    <div id="welcome">
-        <div class="tbl" id="highscores">
-        </div>
-        <center><button id="btnStart">START</button></center>
-    </div>
-    <div id="congrat" class="hide">
-        <div><span id="new-score"></span><span> points</span></div>
-        <input id="name" maxlength="8" size="8" value=""/>
-        <button id="btnOk">OK</button>
-    </div>
+    <div id="root"></div>
+    <div id="splash"></div>
 </body>
 
 </html>

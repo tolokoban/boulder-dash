@@ -1,3 +1,8 @@
+import Level from "./level"
+import Message from "./message"
+import GameInputs from "./game-inputs"
+import { IEnvironment } from "../types"
+
 export default { createEnv, apply, process };
 
 function isRockOrDiam(level, col, row) {
@@ -335,12 +340,12 @@ function apply(env) {
     if (!isHeroAlive) env.killHero();
 }
 
-function createEnv(gl, assets) {
+function createEnv(gl, assets): IEnvironment {
     return {
         gl: gl,
         assets: assets,
         x: 0, y: 0, z: 0, w: 1,
-        cellTime: 180,  // Temps en ms pour traverser une cellule.
+        cellTime: 150,  // Temps en ms pour traverser une cellule.
         nextSynchro: -1,
         levelNumber: 0,
         score: 0,
@@ -370,7 +375,6 @@ function createEnv(gl, assets) {
                 this.divScore.textContent = this.score;
             }
         },
-        //#(eatDiam)
         // Bruit du rocher dont la chute est stoppée par un obstacle.
         playBoom: function() {
             assets.rockSound.pause();
@@ -410,7 +414,12 @@ function createEnv(gl, assets) {
                     }
                 }
             }
-            this.wait = 4;
+            this.wait = 10;
+            if (this.isLevelDone) {
+                Message.show("Well done!", true);
+            } else {
+                Message.show("Ouch!");
+            }
         },
         isLevelDone: false,
         nextLevel: function() {

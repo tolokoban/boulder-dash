@@ -1,0 +1,35 @@
+div.message {
+    z-index: 999999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-stretch: expanded;
+    font-size: 8vw;
+    text-transform: uppercase;
+    color: orange;
+    text-shadow: 0 0 1vw #000;
+    transform: scale(0);
+    opacity: 0;
+}
+
+div.message.show {
+    transition: all .3s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+div.message.show.hide {
+    transition: all .3s;
+    transform: scale(4);
+    opacity: 0;
+}

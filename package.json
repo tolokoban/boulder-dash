@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build && node tools/zip-build.js",
+    "build": "react-app-rewired build",
     "prout": "node tools/zip-build.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

@@ -102,7 +102,6 @@ const WebGL = function() {
       item.typeName = that.getTypeName( item.type );
       item.length = getSize.call( that, gl, item );
       item.location = gl.getAttribLocation( shaderProgram, item.name );
-      console.info( "item=", item );
       attribs[ item.name ] = item;
     }
 
@@ -111,7 +110,6 @@ const WebGL = function() {
   }
 
   function createAttributeSetter( gl, item, shaderProgram ) {
-    console.info( "item=", item );
     var name = item.name;
     return function ( v ) {
       if ( typeof v !== 'boolean' ) {
@@ -119,7 +117,6 @@ const WebGL = function() {
           "] Value must be a boolean: true if you want to enable this attribute, and false to disable it.";
       }
       if ( v ) {
-        console.log( "enableVertexAttribArray(", gl.getAttribLocation( shaderProgram, name ), ")" );
         gl.enableVertexAttribArray(
           gl.getAttribLocation( shaderProgram, name )
         );
@@ -180,7 +177,6 @@ const WebGL = function() {
         }
         var snippet = includes[ includeName ];
         if ( typeof snippet !== 'string' ) {
-          console.error( "Include <" + includeName + "> not found in ", includes );
           throw Error( "Include not found in shader: " + includeName );
         }
         return snippet;
@@ -356,7 +352,6 @@ const WebGL = function() {
           done++;
           var percent = done / count;
           progress.style.transform = "scaleX(" + percent + ")";
-          console.log( url, (100 * percent).toFixed(0) + "%");
 
           if( done >= count ) {
             resolve( result );
@@ -382,10 +377,8 @@ const WebGL = function() {
             var audio = document.createElement("audio");
             result[key] = audio;
             var slot = function() {
-              console.log( "Slot for ", url );
               if( audio._loaded ) return;
               audio._loaded = true;
-              console.log( "Loaded: ", url );
               next( url );
             };
             audio.addEventListener( "canplay", slot );
@@ -397,7 +390,6 @@ const WebGL = function() {
               next( url );
             });
             audio.src = url;
-            console.log("Loading audio: ", url);
           } else {
             fetch( url ).then(function(response) {
               if( !response.ok ) throw "";
