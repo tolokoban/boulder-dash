@@ -60,10 +60,13 @@ div.tbl > div > div {
   display: table-cell;
   vertical-align: middle;
   padding: 3px 16px;
+  font-family: monospace;
+  font-size: 120%;
 }
 
 div.tbl > div > div:first-child {
   text-align: right;
+  text-transform: uppercase;
 }
 
 div.tbl > div > div:last-child {

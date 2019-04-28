@@ -6,7 +6,16 @@ import WebGL from "./lib/webgl"
 import Assets from "./assets"
 import { IAssets } from "./types"
 
-WebGL.fetchAssets(Assets).then(start);
+import Importer from "./lib/importer"
+
+Importer
+    .parseUrl("preview/C3L1.png")
+    .then(msg => console.log(msg))
+    .catch(err => console.error(err));
+
+
+
+//WebGL.fetchAssets(Assets).then(start);
 
 function start(assets: IAssets) {
     document.body.removeChild(document.getElementById("splash"));

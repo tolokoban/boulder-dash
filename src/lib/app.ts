@@ -216,10 +216,10 @@ function initLevel(env, levelNumber) {
     env.wallPainter = new WallPainter(env, tinter.shiftHue(wallTexture, level.tint.wall));
     env.levelPainter = new LevelPainter(env);
 
-    document.getElementById("diam").textContent = level.need;
-    document.getElementById("life").textContent = env.life;
-    document.getElementById("score").textContent = env.score;
-    document.getElementById("bonus").textContent = env.bonus;
+    getById("diam").textContent = level.need;
+    getById("life").textContent = env.life;
+    getById("score").textContent = env.score;
+    getById("bonus").textContent = env.bonus;
 
     return level;
 }
@@ -227,10 +227,10 @@ function initLevel(env, levelNumber) {
 
 function addNewScore(highscore, score) {
     if (highscore.isAnHighScore(score)) {
-        var divCongrat = divCongrat;
+        const divCongrat = getById("congrat");
         divCongrat.className = "";
-        divNewScore.textContent = "" + score;
-        divName.focus();
+        getById("new-score").textContent = "" + score;
+        getById("name").focus();
     } else {
         refreshHighScores(highscore);
     }
@@ -238,7 +238,7 @@ function addNewScore(highscore, score) {
 
 
 function refreshHighScores(highscore) {
-    var div = document.getElementById("highscores");
+    var div = getById("highscores");
     div.innerHTML = "";
     var scores = highscore.getScores();
     scores.forEach(function(item, pos) {
@@ -261,13 +261,13 @@ function refreshHighScores(highscore) {
 
 
 function showHighScores() {
-    const elem = document.getElementById("welcome");
+    const elem = getById("welcome");
     if (elem) elem.className = "";
 }
 
 
 function hideHighScores() {
-    const elem = document.getElementById("welcome");
+    const elem = getById("welcome");
     if (elem) elem.className = "hide";
 }
 

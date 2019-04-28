@@ -29,7 +29,14 @@ export interface IEnvironment {
 }
 
 export interface ILevelDef {
+    name: string;
     need: number;
+    level: number;
+    screen: number;
+    diamValue: number;
+    diamBonus: number;
+    type: "cave"|"bonus";
+    time: number;
     rows: string[];
 }
 
