@@ -1,8 +1,8 @@
 {
   "name": "boulder-dash",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "./",
+  "homepage": "https://tolokoban.github.io/boulder-dash/",
   "dependencies": {
     "@types/jest": "^24.0.9",
     "@types/node": "^11.12.0",
