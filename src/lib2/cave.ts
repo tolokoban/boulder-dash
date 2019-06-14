@@ -99,6 +99,10 @@ export default class Cave {
             this.moveCellTo(cell, below);
             return;
         }
+        if (cell.moving) {
+            if (cell.type === )
+
+        }
     }
 
     /**
